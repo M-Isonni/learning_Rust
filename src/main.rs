@@ -1,5 +1,6 @@
 mod data_types;
 mod functions;
+mod loops;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -63,5 +64,10 @@ fn main() {
     //  functions::func_with_ref_mut_arg(&mut x);
     //  println!("x= {}",x);
 
+    loops::make_loop();
+    loops::make_while();
+    loops::make_for();
+    loops::make_rev_for();
+    loops::make_range_for();
 }
 
