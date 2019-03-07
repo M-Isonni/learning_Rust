@@ -115,5 +115,6 @@ fn main() {
     matches::make_coin_match();
     matches::make_option_match();
     matches::make_placeholder();
+    matches::make_if_let();
 }
 
