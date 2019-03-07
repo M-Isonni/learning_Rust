@@ -12,6 +12,7 @@ enum UsState {
     Alaska,
 }
 
+//we can nest matches if an enum takes an other enum as parameter
 fn value_in_cents(coin: &Coin) -> u32 {
     match coin {
         Coin::Penny => 1,
@@ -51,6 +52,7 @@ pub fn make_option_match(){
     println!("five = {:?}, six = {:?}, none = {:?}",five,six,none);
 }
 
+//_ is called a placeholder, we can use it to list all the remaining values of the enum, they will act accordingly.
 pub fn make_placeholder() {
     let some_u8_value = 1;
     match some_u8_value {
@@ -62,6 +64,7 @@ pub fn make_placeholder() {
     }
 }
 
+//if let can be another way to manage enums if we are in need to manage only a specific condition.
 pub fn make_if_let(){
     let mut count = 0;
     let coin = Coin::Quarter(UsState::Alaska);

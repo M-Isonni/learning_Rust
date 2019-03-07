@@ -19,7 +19,7 @@ pub fn make_rectangle_tuple(){
     println!("the area of the rectangle with tuple is {}",area_with_tuple(rect));
 }
 
-#[derive(Debug)]
+#[derive(Debug)]//this helps println!() to print the values inside the structure passing just the instance of the struct to it.
 struct Rectangle {
     width: u32,
     height: u32,
@@ -71,7 +71,9 @@ pub fn make_rect_with_area_method(){
 }
 
 //Associated functions:
-
+//we can create functions without a reference to self, such functions will be called
+//through the struct name (such as String::form(""))
+//this kind of functions are usually used as constructors.
 impl Rectangle{
     fn square(size: u32) -> Rectangle {
         Rectangle { width: size, height: size }
