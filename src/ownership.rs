@@ -44,12 +44,12 @@ fn makes_copy(x:u32){
     println!("{}", x);
 }// Here, some_integer goes out of scope. Nothing special happens.
 
-pub fn take_and_give_ownership(){
+pub fn take_and_give_ownership(){    
     let s1 = gives_ownership();         // gives_ownership moves its return
                                         // value into s1
     println!("s1 value = {}", s1);
     let s2 = String::from("hello");     // s2 comes into scope
-
+    
     let s3 = takes_and_gives_back(s2);  // s2 is moved into
                                         // takes_and_gives_back, which also
                                         // moves its return value into s3

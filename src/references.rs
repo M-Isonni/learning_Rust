@@ -1,7 +1,7 @@
 pub fn make_ref(){
     let mut s1 = String::from("hello");
     
-    println!("s1 before changing it is: {}", s1);
+    println!("s1 before changing is: {}", s1);
 
     change(&mut s1);
 

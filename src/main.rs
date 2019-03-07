@@ -4,6 +4,7 @@ mod loops;
 mod ownership;
 mod references;
 mod slices;
+mod structs;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -80,5 +81,17 @@ fn main() {
     ownership::take_and_give_ownership();
     references::make_ref();
     slices::slice_string();
+
+    let mut user1 = structs::User{
+        name: String::from("max"),
+        email: String::from("massimoisonni@gmail.com"),
+        age: 28,
+    };
+
+    user1.name=String::from("asd");
+    println!("{}", user1.name);
+
+    let user2=structs::build_user(String::from("mail@mail.com"), String::from("qwer"), 10);
+    println!("user 2 age: {}", user2.age);
 }
 
