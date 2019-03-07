@@ -2,6 +2,7 @@ mod data_types;
 mod functions;
 mod loops;
 mod ownership;
+mod references;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -73,5 +74,6 @@ fn main() {
     ownership::make_string();
     ownership::make_ownership();
     ownership::take_and_give_ownership();
+    references::make_ref();
 }
 
