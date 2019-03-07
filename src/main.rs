@@ -5,6 +5,7 @@ mod ownership;
 mod references;
 mod slices;
 mod structs;
+mod rectangles;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -93,5 +94,14 @@ fn main() {
 
     let user2=structs::build_user(String::from("mail@mail.com"), String::from("qwer"), 10);
     println!("user 2 age: {}", user2.age);
+
+    structs::update_syntax_user();
+    structs::make_tuple_structs();
+
+    rectangles::make_rectangle();
+    rectangles::make_rectangle_tuple();
+    rectangles::make_rectangle_struct();
+    rectangles::make_rect_with_area_method();
+    rectangles::make_rect_constructor();
 }
 

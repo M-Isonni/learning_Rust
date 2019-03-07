@@ -22,7 +22,7 @@ pub fn make_string(){
 
 pub fn make_ownership(){
     let s = String::from("hello");  // s comes into scope
-
+    
     takes_ownership(s);             // s's value moves into the function...
                                     // ... and so is no longer valid here
     //println!("{}", s); cannot call it cause drop has been called on the heap memory part that s reference at the end of the scope of takes_ownership function
@@ -32,7 +32,6 @@ pub fn make_ownership(){
                                     // but i32 is Copy, so it’s okay to still
                                     // use x afterward
     println!("{}", x); //instead i can still call x cause the x being an u32 type is passed as a copy to the function and always stored in the stack
-
 }
 
 fn takes_ownership(s:String){
