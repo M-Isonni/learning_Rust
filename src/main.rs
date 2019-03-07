@@ -6,6 +6,7 @@ mod references;
 mod slices;
 mod structs;
 mod rectangles;
+mod enums;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -103,5 +104,11 @@ fn main() {
     rectangles::make_rectangle_struct();
     rectangles::make_rect_with_area_method();
     rectangles::make_rect_constructor();
+
+    enums::make_ip();
+    enums::make_ip_through_enum();
+    enums::make_message();
+    enums::make_option();
+    enums::add();
 }
 
