@@ -1,6 +1,7 @@
 mod data_types;
 mod functions;
 mod loops;
+mod ownership;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -69,5 +70,8 @@ fn main() {
     loops::make_for();
     loops::make_rev_for();
     loops::make_range_for();
+    ownership::make_string();
+    ownership::make_ownership();
+    ownership::take_and_give_ownership();
 }
 
