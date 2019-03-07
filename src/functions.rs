@@ -12,11 +12,11 @@ pub fn func_with_mut_arg(mut x:i32){
     println!("arg after being modified: {}",x);
 }
 
-// pub fn func_with_ref_mut_arg(mut x:&i32){
-//     println!("arg: {}",x);
-//     x=&9;
-//     println!("arg after being modified: {}",x);
-// }
+pub fn func_with_ref_mut_arg(x:&mut i32){
+    println!("arg: {}",x);
+    *x=9;
+    println!("arg after being modified: {}",x);
+}
 
 //the following function returns a i32 as indicated in the signature
 pub fn plus_one(x:i32)->i32{

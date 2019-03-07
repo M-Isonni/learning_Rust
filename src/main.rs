@@ -3,6 +3,7 @@ mod functions;
 mod loops;
 mod ownership;
 mod references;
+mod slices;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -57,8 +58,11 @@ fn main() {
     functions::new_function_with_arg(5);
     let mut x = 10;
     functions::func_with_mut_arg(x);
-    //inside the function we are modifing a copy of the variable x, not the variable itself
-    println!("x after function is stil: {}",x);
+
+    //passing x to the function through mutable reference allow us to modify the variable inside the function and have it modified outside as well
+    functions::func_with_ref_mut_arg(&mut x);
+    
+    println!("x after function is now: {}",x);
 
     x=functions::plus_one(x);
      println!("x has been assigned with the value returned by the function and now is: {}",x);
@@ -75,5 +79,6 @@ fn main() {
     ownership::make_ownership();
     ownership::take_and_give_ownership();
     references::make_ref();
+    slices::slice_string();
 }
 
