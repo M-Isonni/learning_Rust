@@ -7,6 +7,7 @@ mod slices;
 mod structs;
 mod rectangles;
 mod enums;
+mod matches;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -110,5 +111,9 @@ fn main() {
     enums::make_message();
     enums::make_option();
     enums::add();
+
+    matches::make_coin_match();
+    matches::make_option_match();
+    matches::make_placeholder();
 }
 
