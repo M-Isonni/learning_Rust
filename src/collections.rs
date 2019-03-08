@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 pub fn make_vector(){
     let mut vector:Vec<i32> = Vec::new();
     let vector2=vec![1,2,3,4,5];
@@ -48,5 +50,34 @@ pub fn iterate_and_mutate(){
     for i in &mut v{
         *i+=50;
         println!("new value is {}",i);
+    }
+}
+
+pub fn make_hashmap(){
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Yellow"), 10);
+    scores.insert(String::from("Blue"), 50);
+
+    println!("yellow score: {}", scores["Yellow"]);
+}
+
+pub fn make_hashmap_from_tuples(){
+    let teams  = vec![String::from("Blue"), String::from("Yellow")];
+    let initial_scores = vec![10, 50];
+
+    let scores: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
+    let team_name = String::from("Blue");    
+    
+    let score_opt = scores.get(&team_name);
+
+    let score = hashmap_value(&score_opt);
+
+    println!("blue score: {}", score);
+}
+
+fn hashmap_value(hash: &Option<&&i32>) -> i32{   
+    match *hash{
+        Some(value)=>**value,
+        None=>0,
     }
 }

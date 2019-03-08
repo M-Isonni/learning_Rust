@@ -122,5 +122,7 @@ fn main() {
     collections::get_vector_elem();
     collections::iterate_and_mutate();
     collections::vector_already_borrowed();
+    collections::make_hashmap();
+    collections::make_hashmap_from_tuples();
 }
 
