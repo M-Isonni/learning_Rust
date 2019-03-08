@@ -8,6 +8,7 @@ mod structs;
 mod rectangles;
 mod enums;
 mod matches;
+mod collections;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -116,5 +117,10 @@ fn main() {
     matches::make_option_match();
     matches::make_placeholder();
     matches::make_if_let();
+
+    collections::make_vector();
+    collections::get_vector_elem();
+    collections::iterate_and_mutate();
+    collections::vector_already_borrowed();
 }
 
