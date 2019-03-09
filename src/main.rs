@@ -124,5 +124,8 @@ fn main() {
     collections::vector_already_borrowed();
     collections::make_hashmap();
     collections::make_hashmap_from_tuples();
+    collections::make_hasmap_owning_items();
+    collections::iterating_hashmap();
+    collections::hashmap_managing_keys();
 }
 
