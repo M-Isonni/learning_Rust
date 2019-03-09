@@ -9,6 +9,7 @@ mod rectangles;
 mod enums;
 mod matches;
 mod collections;
+mod panics;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -127,5 +128,8 @@ fn main() {
     collections::make_hasmap_owning_items();
     collections::iterating_hashmap();
     collections::hashmap_managing_keys();
+
+    //panics::make_panic();
+    //panics::out_of_index_panic();
 }
 
