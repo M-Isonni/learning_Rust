@@ -131,5 +131,8 @@ fn main() {
 
     //panics::make_panic();
     //panics::out_of_index_panic();
+    panics::make_res_error();
+    panics::make_unwrap_error();
+    panics::propagating_error();
 }
 
