@@ -112,7 +112,5 @@ pub fn propagating_error(){
 
 pub fn _make_box_error()-> Result<(),Box<dyn Error>>{
     let f = File::open("hello.txt")?;
-
     Ok(())
-
 }

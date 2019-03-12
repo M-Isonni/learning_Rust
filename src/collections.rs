@@ -171,6 +171,6 @@ fn update_value(){
     }
 
     for(key,value) in &hash{
-        println!("key: {}, value: {}",key,value);
+        println!("key: {}, value: {}",key,value);        
     }
 }
