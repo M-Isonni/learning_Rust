@@ -10,6 +10,7 @@ mod enums;
 mod matches;
 mod collections;
 mod panics;
+mod generics;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -134,5 +135,9 @@ fn main() {
     panics::make_res_error();
     panics::make_unwrap_error();
     panics::propagating_error();
+
+    generics::extracting_function();
+    generics::make_largest();
+    generics::make_generic_point();
 }
 
