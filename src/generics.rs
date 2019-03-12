@@ -50,16 +50,16 @@ fn largest_char(list: &[char]) -> char {
     largest
 }
 
-// fn general_larget<T>(list: &[T])->T{
-//     let mut largest = list[0];
+fn general_larget<T: PartialOrd + Clone>(list: &[T])->T{
+    let mut largest = list[0].clone();
 
-//     for &item in list.iter(){
-//         if largest<item{
-//             largest=item;
-//         }
-//     }
-//     largest
-// }
+    for item in list.iter(){
+        if largest<*item{
+            largest=item.clone();
+        }
+    }
+    largest
+}
 
 pub fn make_largest(){
     let number_list = vec![34, 50, 25, 100, 65];
@@ -96,14 +96,15 @@ impl<T, U> Point<T, U> {
     }
 }
 
-impl Point<f32,f32> {
-    fn clone(&self)-> Point<f32,f32>{ 
-        Point{
+impl<T: Clone, U: Clone> Point<T, U> {
+    fn clone(&self)-> Point<T,U>{         
+        Point{            
             x: self.x.clone(),
             y: self.y.clone(),
         }
     }
 }
+
 
 pub fn make_generic_point() {
     let both_integer = Point { x: 5, y: 10 };

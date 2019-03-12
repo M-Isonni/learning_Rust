@@ -11,6 +11,7 @@ mod matches;
 mod collections;
 mod panics;
 mod generics;
+mod traits;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
