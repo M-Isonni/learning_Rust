@@ -12,6 +12,7 @@ mod collections;
 mod panics;
 mod generics;
 mod traits;
+mod lifetimes;
 
 fn main() {
     //x cannot be changed cause it's a immutable variable
@@ -140,5 +141,7 @@ fn main() {
     generics::extracting_function();
     generics::make_largest();
     generics::make_generic_point();
+
+    lifetimes::longest_string();
 }
 
